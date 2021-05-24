@@ -88,7 +88,7 @@ fill = c("red", "black"),
 horiz = FALSE
 )![Graphic5](https://user-images.githubusercontent.com/82826151/119325854-904ea700-bc3e-11eb-8501-8c8ccfa919da.png)
 
-### Debemos utilizar nuevamente la función "tapply", para realizar periodos mensuales.
+### Debemos utilizar nuevamente la función _"tapply"_, para realizar periodos mensuales.
 MMQ_Estrella <- tapply(Estrella,
 format(Tempdate, format = "%m"), 
 FUN = sum)
@@ -96,3 +96,11 @@ MMQ_Banano <- tapply(Banano,
 format(Tempdate, format = "%m"), 
 FUN = sum)
 
+### Utilizaremos la función _"cor"_ para poder obtener datos que muestran una correlación.
+corinp <- cor(inp[,2:3], method = "spearman")
+
+plot(Estrella, Banano,
+     main = 'Correlacion de las cuencuas',
+)
+inp.lm <- lm(Estrella ~ Banano, data = inp)
+summary(inp.lm) ![Graphic6](https://user-images.githubusercontent.com/82826151/119330372-5fbd3c00-bc43-11eb-8dfd-c3ea1501c483.png)
