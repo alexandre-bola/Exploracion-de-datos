@@ -1,4 +1,6 @@
 # Exploración de datos hidrologicos
+## Procesamiento de Datos Geográficos
+## Alexandre Bolaños Umaña
 
 ### Para poder iniciar, debemos cargar y leer el archivo csv en cuestión, así podremos trabajarlo, para ello utilizaremos las siguientes funciones:
 inp <- read.csv("FDC.csv", na.strings ="")
