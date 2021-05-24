@@ -50,3 +50,13 @@ ylab = "Regularidad",
 )
 ![Graphic3](https://user-images.githubusercontent.com/82826151/119315353-fcc3a900-bc32-11eb-8e01-0dd0d67f66e6.png)
 
+### Para ordenar de mejor manera la información, la siguiente función nos ayudará a evaluar datos en el archivo csv y poder observarlos y analizarlos de mejor manera:
+names(inp) <- c("Fecha", "Estrella", "Banano")
+attach(inp)
+plot(Estrella,
+main = "Rio Estrella", 
+xlab = "Fecha",
+ylab = "Caudal por dia en Mm",
+)
+![Graphic4](https://user-images.githubusercontent.com/82826151/119318394-7b6e1580-bc36-11eb-92c6-f0c4e34cfd95.png)
+
