@@ -87,3 +87,12 @@ legend = c("Estrella", "Banano"),
 fill = c("red", "black"),
 horiz = FALSE
 )![Graphic5](https://user-images.githubusercontent.com/82826151/119325854-904ea700-bc3e-11eb-8501-8c8ccfa919da.png)
+
+### Debemos utilizar nuevamente la función "tapply", para realizar periodos mensuales.
+MMQ_Estrella <- tapply(Estrella,
+format(Tempdate, format = "%m"), 
+FUN = sum)
+MMQ_Banano <- tapply(Banano,
+format(Tempdate, format = "%m"), 
+FUN = sum)
+
