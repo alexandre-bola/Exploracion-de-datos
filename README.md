@@ -30,7 +30,7 @@ legend(
   horiz = FALSE
   )![Graphic1](https://user-images.githubusercontent.com/82826151/119308878-d39f1a80-bc2a-11eb-89b9-3a7617bc06a8.png)
   
-  ### Para poder observar (en RStudio) los datos de manera resumida, a través de un promedio estadístico, de ambos ríos, se deberá escribir la siguiente función.
+  ### Para poder observar (en RStudio) los datos de manera resumida, a través de un promedio estadístico, de ambos ríos, se deberá escribir la siguiente función:
 
 summary(inp[,2:3])
 
@@ -59,4 +59,31 @@ xlab = "Fecha",
 ylab = "Caudal por dia en Mm",
 )
 ![Graphic4](https://user-images.githubusercontent.com/82826151/119318394-7b6e1580-bc36-11eb-92c6-f0c4e34cfd95.png)
+### Para poder definir el tiempo del archivo, debemos crear un archivo intermedio, el cual definirá (dentro del archivo, día, mes y año).
+Tempdate <- strptime(inp[,1], format = "%d/%m/%Y") 
 
+### Con la función anteriormente vista, se podrán poner fechas específicas, para periodos de tiempo anuales, se deberá utilizar la siguiente función:
+MAQ_Estrella <- tapply(Estrella,
+format(Tempdate, format = "%Y"),
+FUN = sum)
+MAQ_Banano <- tapply(Banano,
+format(Tempdate, format = "%Y"), 
+FUN = sum)
+write.csv(rbind(MAQ_Estrella, MAQ_Banano),  file = "MAQ.csv")
+
+### Para poder observar de manera graficada, lo anteriormente generado, debemos utilizar la siguiente función:
+
+plot(
+MAQ_Banano, ylim = c(0,3000),
+main = "Valor en Mm por año",
+xlab = "Fechas",
+ylab = "Caudal anual",
+)
+lines(MAQ_Estrella, col = 2)
+      
+legend(x = "topright",
+inset = 0.05,
+legend = c("Estrella", "Banano"),
+fill = c("red", "black"),
+horiz = FALSE
+)![Graphic5](https://user-images.githubusercontent.com/82826151/119325854-904ea700-bc3e-11eb-8501-8c8ccfa919da.png)
