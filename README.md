@@ -109,3 +109,6 @@ summary(inp.lm)
 ### Para finalizar, se visualizarán modelos analíticos para comparar y relacionar los residuos de ambos ríos. Para esto, usaremos la siguiente función: 
 plot(inp.lm)
 ![Graphic7](https://user-images.githubusercontent.com/82826151/119331541-b414eb80-bc44-11eb-9b8c-9af4f50f0203.png)
+![Graphic8](https://user-images.githubusercontent.com/82826151/119331778-fdfdd180-bc44-11eb-8178-8024d0a9d32d.png)
+![Graphic9](https://user-images.githubusercontent.com/82826151/119331798-048c4900-bc45-11eb-9a13-36cab137ba27.png)
+
