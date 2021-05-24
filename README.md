@@ -100,7 +100,12 @@ FUN = sum)
 corinp <- cor(inp[,2:3], method = "spearman")
 
 plot(Estrella, Banano,
-     main = 'Correlacion de las cuencuas',
+     main = 'Correlacion de las cuencuas del Rio Banano y el Rio Estrella',
 )
 inp.lm <- lm(Estrella ~ Banano, data = inp)
-summary(inp.lm) ![Graphic6](https://user-images.githubusercontent.com/82826151/119330372-5fbd3c00-bc43-11eb-8dfd-c3ea1501c483.png)
+summary(inp.lm)
+![Graphic6](https://user-images.githubusercontent.com/82826151/119330669-b88cd480-bc43-11eb-869b-0a711af74e7d.png)
+
+### Para finalizar, se visualizarán modelos analíticos para comparar y relacionar los residuos de ambos ríos. Para esto, usaremos la siguiente función: 
+plot(inp.lm)
+![Graphic7](https://user-images.githubusercontent.com/82826151/119331541-b414eb80-bc44-11eb-9b8c-9af4f50f0203.png)
