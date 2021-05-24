@@ -1,7 +1,10 @@
-# Exploracion-de-datos-hidrologicos
+# Exploracion de datos hidrologicos
 
+### Para poder iniciar, debemos cargar y leer el archivo csv en cuestión, así podremos trabajarlo, para ello utilizaremos las siguientes funciones:
 inp <- read.csv("FDC.csv", na.strings ="")
 
+
+### Para poder observar los encabezados, así como sus dimensiones, escribiremos lo siguiente:
 
 head(inp)
 dim(inp)
@@ -10,7 +13,7 @@ dim(inp)
 
 
 
-
+### Seguidamente, para poder observar los datos graficados, así como para asignarle un color en el gráfico, se deberá escribir la siguiente función:
 plot(
   inp[,2], type = "l", col="blue", 
   main = "Volmen del agua",
