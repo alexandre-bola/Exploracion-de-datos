@@ -43,4 +43,10 @@ ylab = "Regularidad",
 ) 
 ![Graphic2](https://user-images.githubusercontent.com/82826151/119314971-9048aa00-bc32-11eb-8962-1f8bfbadaf64.png)
 
+hist(inp[,3],
+main = "Banano",
+xlab = "Cantidad por dia en Mm",
+ylab = "Regularidad",
+)
+![Graphic3](https://user-images.githubusercontent.com/82826151/119315353-fcc3a900-bc32-11eb-8e01-0dd0d67f66e6.png)
 
