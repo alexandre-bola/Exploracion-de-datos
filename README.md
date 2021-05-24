@@ -38,8 +38,9 @@ summary(inp[,2:3])
 summary(inp[,2:3])
 hist(inp[,2],
 main = "Estrella",
-xlab = "Cantidad por dia",
+xlab = "Cantidad por dia en Mm",
 ylab = "Regularidad", 
 ) 
-![Graphic2](https://user-images.githubusercontent.com/82826151/119314699-43fd6a00-bc32-11eb-826a-118d2a88d532.png)
+![Graphic2](https://user-images.githubusercontent.com/82826151/119314971-9048aa00-bc32-11eb-8962-1f8bfbadaf64.png)
+
 
